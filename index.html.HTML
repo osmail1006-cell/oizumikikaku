@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大泉企画｜空室清掃・新築美装の施工パートナー</title>
+<meta name="description" content="大泉企画は不動産管理会社様・元請業者様向けに空室クリーニング・新築美装・店舗施設美装を承る施工パートナーです。損害賠償保険加入済み、迅速かつ柔軟な対応で施工品質と納期を徹底遵守します。">
+
+<!-- Google Fonts: 見出しは明朝体で信頼感を、本文はゴシック体で視認性を確保 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+  /* ==========================================================
+     0. トークン定義（色・タイポグラフィ・余白）
+     ========================================================== */
+  :root{
+    --c-white:      #ffffff;
+    --c-offwhite:   #f6f8fa;
+    --c-navy:       #0b3c6b;   /* メインの信頼感カラー */
+    --c-navy-deep:  #082c50;   /* ヘッダー・フッター等の濃色 */
+    --c-blue:       #0056b3;   /* アクセント／CTA */
+    --c-blue-light: #eaf2fb;   /* 淡色背景 */
+    --c-ink:        #1a2430;   /* 本文色（純黒を避ける） */
+    --c-ink-soft:   #4c5a6a;   /* 補助テキスト */
+    --c-line:       #e1e6ec;   /* 罫線・境界 */
+
+    --font-head: "Noto Serif JP", serif;
+    --font-body: "Noto Sans JP", sans-serif;
+
+    --wrap: 1120px;
+    --radius: 4px;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+
+  body{
+    font-family: var(--font-body);
+    color: var(--c-ink);
+    background: var(--c-white);
+    line-height: 1.85;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; text-decoration:none; }
+  ul{ list-style:none; }
+
+  h1,h2,h3,h4{
+    font-family: var(--font-head);
+    color: var(--c-navy-deep);
+    line-height: 1.5;
+    font-weight: 600;
+  }
+
+  .wrap{
+    max-width: var(--wrap);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  section{ padding: 88px 0; }
+
+  .section-head{
+    max-width: 640px;
+    margin-bottom: 48px;
+  }
+  .section-head .kicker{
+    display:block;
+    font-size: 14px;
+    color: var(--c-blue);
+    font-weight: 500;
+    letter-spacing: .04em;
+    margin-bottom: 10px;
+  }
+  .section-head h2{
+    font-size: clamp(24px, 3vw, 32px);
+    margin-bottom: 14px;
+  }
+  .section-head p{
+    color: var(--c-ink-soft);
+    font-size: 15px;
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding: 14px 28px;
+    border-radius: var(--radius);
+    font-weight: 700;
+    font-size: 15px;
+    border: 1px solid transparent;
+    cursor:pointer;
+    transition: background-color .18s ease, color .18s ease, border-color .18s ease;
+  }
+  .btn-primary{
+    background: var(--c-blue);
+    color: var(--c-white);
+  }
+  .btn-primary:hover{ background: var(--c-navy-deep); }
+  .btn-outline{
+    background: transparent;
+    color: var(--c-navy);
+    border-color: var(--c-navy);
+  }
+  .btn-outline:hover{ background: var(--c-navy); color: var(--c-white); }
+  .btn-tel{
+    background: var(--c-white);
+    color: var(--c-navy);
+    border-color: var(--c-line);
+  }
+  .btn-tel:hover{ border-color: var(--c-navy); }
+
+  /* ==========================================================
+     1. ヘッダー
+     ========================================================== */
+  header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,.96);
+    border-bottom: 1px solid var(--c-line);
+    backdrop-filter: blur(6px);
+  }
+  .header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 16px 24px;
+    max-width: var(--wrap);
+    margin: 0 auto;
+  }
+  .logo{
+    font-family: var(--font-head);
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--c-navy-deep);
+    white-space: nowrap;
+  }
+  .logo small{
+    display:block;
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--c-ink-soft);
+    letter-spacing: .05em;
+  }
+
+  nav.main-nav{
+    display:flex;
+    gap: 32px;
+  }
+  nav.main-nav a{
+    font-size: 14.5px;
+    font-weight: 500;
+    color: var(--c-ink);
+    padding: 4px 2px;
+    border-bottom: 2px solid transparent;
+    transition: border-color .18s ease, color .18s ease;
+  }
+  nav.main-nav a:hover{
+    color: var(--c-navy);
+    border-bottom-color: var(--c-blue);
+  }
+
+  .header-actions{
+    display:flex;
+    align-items:center;
+    gap: 10px;
+  }
+  .header-actions .btn{ padding: 10px 18px; font-size: 13.5px; }
+
+  .nav-toggle{
+    display:none;
+    width: 40px; height: 40px;
+    border: 1px solid var(--c-line);
+    background: var(--c-white);
+    border-radius: var(--radius);
+    position: relative;
+    cursor: pointer;
+  }
+  .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after{
+    content:"";
+    position:absolute;
+    left:10px; right:10px;
+    height:2px;
+    background: var(--c-navy-deep);
+  }
+  .nav-toggle span{ top:19px; }
+  .nav-toggle span::before{ top:-6px; }
+  .nav-toggle span::after{ top:6px; }
+
+  /* ==========================================================
+     2. ヒーロー
+     ========================================================== */
+  .hero{
+    background: linear-gradient(180deg, var(--c-blue-light) 0%, var(--c-white) 100%);
+    border-bottom: 1px solid var(--c-line);
+  }
+  .hero .wrap{
+    display:grid;
+    grid-template-columns: 1.05fr .95fr;
+    gap: 56px;
+    align-items:center;
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+  .hero-badge{
+    display:inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--c-navy);
+    background: var(--c-white);
+    border: 1px solid var(--c-blue);
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-bottom: 22px;
+  }
+  .hero h1{
+    font-size: clamp(30px, 4vw, 44px);
+    letter-spacing: .01em;
+    margin-bottom: 20px;
+  }
+  .hero h1 .accent{ color: var(--c-blue); }
+  .hero-lead{
+    font-size: 16px;
+    color: var(--c-ink-soft);
+    margin-bottom: 32px;
+    max-width: 480px;
+  }
+  .hero-cta{
+    display:flex;
+    flex-wrap:wrap;
+    gap: 14px;
+    margin-bottom: 34px;
+  }
+  .hero-meta{
+    display:flex;
+    gap: 28px;
+    flex-wrap:wrap;
+  }
+  .hero-meta div{ font-size: 13px; color: var(--c-ink-soft); }
+  .hero-meta strong{
+    display:block;
+    font-family: var(--font-head);
+    font-size: 22px;
+    color: var(--c-navy-deep);
+  }
+
+  .hero-visual{
+    position:relative;
+  }
+  .hero-visual .frame{
+    aspect-ratio: 4 / 3;
+    background: var(--c-white) center/cover no-repeat;
+    /* TODO: 実際の施工後写真（ピカピカのキッチンや室内）に差し替え。例: url('images/hero-main.jpg') */
+    background-image:
+      linear-gradient(135deg, rgba(11,60,107,.08), rgba(11,60,107,.02)),
+      repeating-linear-gradient(45deg, #eef2f6 0 12px, #f6f8fa 12px 24px);
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color: var(--c-ink-soft);
+    font-size: 13px;
+    text-align:center;
+    padding: 20px;
+  }
+  .hero-visual .frame::before{
+    content: "清掃完了後の室内・キッチン写真プレースホルダー\A images/hero-main.jpg";
+    white-space: pre-line;
+  }
+  .hero-visual .float-card{
+    position:absolute;
+    left: -18px;
+    bottom: -22px;
+    background: var(--c-white);
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    box-shadow: 0 12px 28px rgba(11,60,107,.12);
+    max-width: 260px;
+  }
+  .hero-visual .float-card p{ font-size: 13px; color: var(--c-ink-soft); }
+  .hero-visual .float-card strong{ display:block; font-size: 14px; color: var(--c-navy-deep); margin-bottom: 4px; }
+
+  /* ==========================================================
+     3. 選ばれる理由（Features）
+     ========================================================== */
+  .features{ background: var(--c-white); }
+  .feature-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--c-line);
+    border: 1px solid var(--c-line);
+  }
+  .feature-card{
+    background: var(--c-white);
+    padding: 32px 26px;
+  }
+  .feature-card .num{
+    font-family: var(--font-head);
+    font-size: 13px;
+    color: var(--c-blue);
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .feature-card h3{
+    font-size: 16.5px;
+    margin-bottom: 10px;
+  }
+  .feature-card p{
+    font-size: 13.8px;
+    color: var(--c-ink-soft);
+  }
+
+  /* ==========================================================
+     4. サービス内容
+     ========================================================== */
+  .services{ background: var(--c-offwhite); border-top:1px solid var(--c-line); border-bottom:1px solid var(--c-line); }
+  .service-grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .service-card{
+    background: var(--c-white);
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius);
+    padding: 28px;
+    display:flex;
+    gap: 18px;
+  }
+  .service-icon{
+    flex: none;
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    background: var(--c-blue-light);
+    color: var(--c-blue);
+    display:flex; align-items:center; justify-content:center;
+    font-family: var(--font-head);
+    font-weight: 700;
+  }
+  .service-card h3{ font-size: 16.5px; margin-bottom: 8px; }
+  .service-card p{ font-size: 14px; color: var(--c-ink-soft); }
+
+  /* ==========================================================
+     5. 施工実績（Before / After）
+     ========================================================== */
+  .portfolio-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .case-card{
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--c-white);
+  }
+  .case-compare{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .case-compare figure{ position:relative; }
+  .case-compare .ba-img{
+    aspect-ratio: 4 / 3;
+    background: repeating-linear-gradient(45deg, #eef2f6 0 12px, #f6f8fa 12px 24px);
+    display:flex; align-items:center; justify-content:center;
+    color: var(--c-ink-soft);
+    font-size: 11.5px;
+    text-align:center;
+    padding: 8px;
+  }
+  .case-compare figcaption{
+    position:absolute;
+    top: 10px; left: 10px;
+    background: var(--c-navy-deep);
+    color: var(--c-white);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    padding: 4px 10px;
+    border-radius: 2px;
+  }
+  .case-body{ padding: 20px 22px; }
+  .case-body h3{ font-size: 15.5px; margin-bottom: 8px; }
+  .case-body .case-meta{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 12px;
+    color: var(--c-ink-soft);
+    margin-bottom: 12px;
+    border-bottom: 1px dashed var(--c-line);
+    padding-bottom: 12px;
+  }
+  .case-body p.comment{ font-size: 13.5px; color: var(--c-ink-soft); }
+
+  /* ==========================================================
+     6. 施工の流れ（Flow）※本当に手順なので番号を使用
+     ========================================================== */
+  .flow{ background: var(--c-navy-deep); color: var(--c-white); }
+  .flow .section-head h2,
+  .flow .section-head p{ color: var(--c-white); }
+  .flow .section-head p{ color: rgba(255,255,255,.68); }
+  .flow .section-head .kicker{ color: #7fb2e6; }
+
+  .flow-steps{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position:relative;
+  }
+  .flow-step{
+    padding: 0 20px 0 0;
+    position:relative;
+  }
+  .flow-step:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    top: 22px;
+    right: -4px;
+    width: 20px;
+    height: 1px;
+    background: rgba(255,255,255,.3);
+  }
+  .flow-step .step-num{
+    font-family: var(--font-head);
+    font-size: 34px;
+    font-weight: 700;
+    color: #7fb2e6;
+    margin-bottom: 14px;
+  }
+  .flow-step h3{
+    color: var(--c-white);
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .flow-step p{
+    font-size: 13.5px;
+    color: rgba(255,255,255,.7);
+  }
+
+  /* ==========================================================
+     7. 事業概要・対応エリア
+     ========================================================== */
+  .about .wrap{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items:start;
+  }
+  .about-table{
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .about-table tr{ border-bottom: 1px solid var(--c-line); }
+  .about-table tr:first-child{ border-top: 1px solid var(--c-line); }
+  .about-table th, .about-table td{
+    text-align:left;
+    padding: 16px 12px;
+    font-size: 14.5px;
+    vertical-align: top;
+  }
+  .about-table th{
+    width: 140px;
+    color: var(--c-ink-soft);
+    font-weight: 500;
+  }
+  .about-table td{ color: var(--c-ink); }
+
+  .area-box{
+    background: var(--c-offwhite);
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius);
+    padding: 28px;
+  }
+  .area-box h3{ font-size: 16px; margin-bottom: 16px; }
+  .area-list{ display:flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+  .area-pin{
+    display:inline-flex;
+    align-items:center;
+    gap: 6px;
+    background: var(--c-white);
+    border: 1px solid var(--c-blue);
+    color: var(--c-navy);
+    font-size: 13.5px;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 999px;
+  }
+  .area-note{
+    font-size: 13px;
+    color: var(--c-ink-soft);
+    border-left: 3px solid var(--c-blue);
+    padding-left: 14px;
+  }
+  .badge-insurance{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top: 22px;
+    padding: 12px 16px;
+    background: var(--c-blue-light);
+    border-left: 3px solid var(--c-blue);
+    font-size: 13.5px;
+    color: var(--c-navy-deep);
+    border-radius: 2px;
+  }
+
+  /* ==========================================================
+     8. お問い合わせ
+     ========================================================== */
+  .contact{ background: var(--c-offwhite); border-top:1px solid var(--c-line); }
+  .contact .wrap{
+    display:grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: 56px;
+  }
+  .contact-info h2{ font-size: 26px; margin-bottom: 16px; }
+  .contact-info p{ color: var(--c-ink-soft); font-size: 14.5px; margin-bottom: 26px; }
+  .contact-urgent{
+    background: var(--c-white);
+    border: 1px solid var(--c-blue);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin-bottom: 22px;
+    font-size: 13px;
+    color: var(--c-navy-deep);
+  }
+  .contact-line{
+    display:flex;
+    align-items:center;
+    gap: 14px;
+    padding: 16px 0;
+    border-top: 1px solid var(--c-line);
+  }
+  .contact-line:last-of-type{ border-bottom: 1px solid var(--c-line); }
+  .contact-line .ico{
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: var(--c-white);
+    border: 1px solid var(--c-line);
+    display:flex; align-items:center; justify-content:center;
+    font-size: 15px;
+    color: var(--c-navy);
+    flex: none;
+  }
+  .contact-line strong{ display:block; font-size: 12px; color: var(--c-ink-soft); font-weight: 500; }
+  .contact-line span{ font-size: 17px; font-family: var(--font-head); color: var(--c-navy-deep); }
+
+  form.contact-form{
+    background: var(--c-white);
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius);
+    padding: 32px;
+  }
+  .form-row{ display:grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px; }
+  .form-group{ margin-bottom: 18px; }
+  .form-group label{
+    display:block;
+    font-size: 13.5px;
+    font-weight: 500;
+    margin-bottom: 7px;
+    color: var(--c-ink);
+  }
+  .form-group label .req{ color:#c0392b; font-size:11px; margin-left:4px; }
+  .form-group input,
+  .form-group select,
+  .form-group textarea{
+    width: 100%;
+    padding: 12px 14px;
+    font-family: var(--font-body);
+    font-size: 14.5px;
+    border: 1px solid var(--c-line);
+    border-radius: var(--radius);
+    background: var(--c-white);
+    color: var(--c-ink);
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus{
+    outline: 2px solid var(--c-blue);
+    outline-offset: 1px;
+    border-color: var(--c-blue);
+  }
+  .form-group textarea{ min-height: 120px; resize: vertical; }
+  form.contact-form .btn{ width: 100%; margin-top: 6px; }
+
+  /* ==========================================================
+     9. フッター
+     ========================================================== */
+  footer{
+    background: var(--c-navy-deep);
+    color: rgba(255,255,255,.72);
+    padding: 44px 0 22px;
+  }
+  footer .wrap{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap: 24px;
+  }
+  footer .f-logo{
+    font-family: var(--font-head);
+    color: var(--c-white);
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  footer .f-addr{ font-size: 13px; line-height: 1.9; }
+  footer nav{ display:flex; gap: 22px; flex-wrap:wrap; }
+  footer nav a{ font-size: 13px; }
+  footer nav a:hover{ color: var(--c-white); }
+  .copyright{
+    text-align:center;
+    font-size: 12px;
+    color: rgba(255,255,255,.45);
+    margin-top: 34px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,.12);
+  }
+
+  /* ==========================================================
+     10. レスポンシブ対応
+     ========================================================== */
+  @media (max-width: 980px){
+    .hero .wrap{ grid-template-columns: 1fr; padding-top: 40px; }
+    .hero-visual{ order: -1; }
+    .about .wrap{ grid-template-columns: 1fr; }
+    .contact .wrap{ grid-template-columns: 1fr; }
+    .portfolio-grid{ grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 860px){
+    nav.main-nav{ display:none; }
+    .header-actions .btn-outline{ display:none; }
+    .nav-toggle{ display:block; }
+    .feature-grid{ grid-template-columns: repeat(2, 1fr); }
+    .service-grid{ grid-template-columns: 1fr; }
+    .portfolio-grid{ grid-template-columns: 1fr; }
+    .flow-steps{ grid-template-columns: 1fr 1fr; row-gap: 32px; }
+    .flow-step:nth-child(2)::after{ display:none; }
+    .form-row{ grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 560px){
+    section{ padding: 60px 0; }
+    .feature-grid{ grid-template-columns: 1fr; }
+    .flow-steps{ grid-template-columns: 1fr; }
+    .flow-step::after{ display:none !important; }
+    .case-compare{ grid-template-columns: 1fr 1fr; }
+    .hero-visual .float-card{ position:static; margin-top: 14px; }
+    .header-actions .btn-tel span.label{ display:none; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ transition:none !important; }
+  }
+
+  :focus-visible{
+    outline: 2px solid var(--c-blue);
+    outline-offset: 2px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ==========================================================
+     ヘッダー
+     ========================================================== -->
+<header>
+  <div class="header-inner">
+    <a href="#top" class="logo">大泉企画<small>House Cleaning &amp; Finishing</small></a>
+
+    <nav class="main-nav" aria-label="メインナビゲーション">
+      <a href="#services">事業内容</a>
+      <a href="#portfolio">施工実績</a>
+      <a href="#strength">選ばれる理由</a>
+      <a href="#about">概要・エリア</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+
+    <div class="header-actions">
+      <!-- TODO: 電話番号を実際の番号に差し替え -->
+      <a href="tel:0000000000" class="btn btn-tel"><span class="label">お電話でお問い合わせ</span> 000-0000-0000</a>
+      <a href="#contact" class="btn btn-primary">Webでお問い合わせ</a>
+      <button class="nav-toggle" aria-label="メニューを開く"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- ==========================================================
+     ヒーロー
+     ========================================================== -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="hero-text">
+      <span class="hero-badge">不動産管理会社様・元請業者様専用</span>
+      <h1>空室清掃・新築美装の<br><span class="accent">確実な</span>施工パートナー</h1>
+      <p class="hero-lead">
+        不動産管理会社様・元請業者様のご要望に迅速かつ柔軟に対応。
+        品質と納期を徹底遵守し、次の入居者様・施主様に喜ばれる仕上がりをお約束します。
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">見積・お問い合わせ</a>
+        <a href="#portfolio" class="btn btn-outline">施工実績を見る</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>対応エリア</strong>埼玉・東京（神奈川は要相談）</div>
+        <div><strong>加入済み</strong>損害賠償責任保険</div>
+        <div><strong>柔軟対応</strong>繁忙期・複数現場</div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <!-- TODO: 施工後の写真に差し替え: images/hero-main.jpg -->
+      <div class="frame"></div>
+      <div class="float-card">
+        <strong>退去立会い後、即対応可能</strong>
+        <p>ご連絡から現地確認まで迅速にご案内します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     選ばれる理由（強み）
+     ========================================================== -->
+<section class="features" id="strength">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">STRENGTH</span>
+      <h2>大泉企画が選ばれる理由</h2>
+      <p>空室清掃・美装に特化した技術力と、保険・体制・マナーの徹底により施工パートナーとしての信頼にお応えします。</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="num">01</div>
+        <h3>空室清掃・美装に特化した技術力</h3>
+        <p>賃貸退去後や引き渡し前の清掃に特化。次の入居者様・施主様に喜ばれる品質を追求しています。</p>
+      </div>
+      <div class="feature-card">
+        <div class="num">02</div>
+        <h3>柔軟な施工・動員体制</h3>
+        <p>独自のパートナー企業ネットワークにより、繁忙期や複数現場の重複、急なご依頼にも柔軟に対応します。</p>
+      </div>
+      <div class="feature-card">
+        <div class="num">03</div>
+        <h3>損害賠償責任保険加入済み</h3>
+        <p>対物・対人補償完備。万が一の現場トラブルにも迅速・確実に対応できる安心の施工環境です。</p>
+      </div>
+      <div class="feature-card">
+        <div class="num">04</div>
+        <h3>マナーと納期の徹底遵守</h3>
+        <p>近隣配慮と現場でのマナーを徹底したうえで、報告・連絡・相談を迅速に行い納期を遵守します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     サービス内容
+     ========================================================== -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">SERVICE</span>
+      <h2>事業内容・対応業務</h2>
+      <p>賃貸物件の退去後清掃から新築美装、店舗・施設の美装まで、空室・引き渡しに関わる清掃業務全般に対応します。</p>
+    </div>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="service-icon">賃</div>
+        <div>
+          <h3>賃貸・分譲 マンション・アパート退去後 空室クリーニング</h3>
+          <p>退去後の原状回復清掃に対応。次の入居募集にすぐ出せる状態に仕上げます。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">新</div>
+        <div>
+          <h3>新築戸建て・新築マンション 美装・引き渡し清掃</h3>
+          <p>建築完了後のホコリ・養生跡・シール残りなどを丁寧に除去し、お引き渡しにふさわしい状態に仕上げます。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">戸</div>
+        <div>
+          <h3>戸建て売却前・リフォーム後の各種空室清掃</h3>
+          <p>売却前の内見対応やリフォーム後の建材粉塵除去など、状況に応じた清掃をご提案します。</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">委</div>
+        <div>
+          <h3>元請様・管理会社様からの業務委託・施工協力</h3>
+          <p>元請会社様・管理会社様の一部工程を担う施工協力会社として、継続的な業務委託にも対応いたします。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     施工実績（Before / After）
+     ========================================================== -->
+<section class="portfolio" id="portfolio">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">PORTFOLIO</span>
+      <h2>施工実績</h2>
+      <p>これまでの施工事例の一部をご紹介します。作業時間の目安・施工のポイントもあわせてご確認いただけます。</p>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <!-- 実績カード 1 -->
+      <div class="case-card">
+        <div class="case-compare">
+          <figure>
+            <figcaption>Before</figcaption>
+            <!-- TODO: images/before1.jpg に差し替え -->
+            <img src="images/before1.jpg" alt="作業前" class="ba-img">
+          </figure>
+          <figure>
+            <figcaption>After</figcaption>
+            <!-- TODO: images/after1.jpg に差し替え -->
+            <img src="images/after1.jpg" alt="作業後" class="ba-img">
+          </figure>
+        </div>
+        <div class="case-body">
+          <h3>退去後空室全体の清掃</h3>
+          <div class="case-meta">
+            <span>作業時間目安：約4時間</span>
+            <span>作業人数：2名</span>
+          </div>
+          <p class="comment">水回り・フローリング・建具まで一括対応。次の内見に間に合うスケジュールで仕上げました。</p>
+        </div>
+      </div>
+
+      <!-- 実績カード 2 -->
+      <div class="case-card">
+        <div class="case-compare">
+          <figure>
+            <figcaption>Before</figcaption>
+            <!-- TODO: images/before2.jpg に差し替え -->
+            <img src="images/before2.jpg" alt="作業前" class="ba-img">
+          </figure>
+          <figure>
+            <figcaption>After</figcaption>
+            <!-- TODO: images/after2.jpg に差し替え -->
+            <img src="images/after2.jpg" alt="作業後" class="ba-img">
+          </figure>
+        </div>
+        <div class="case-body">
+          <h3>レンジフード・油汚れ除去</h3>
+          <div class="case-meta">
+            <span>作業時間目安：約2時間</span>
+            <span>作業人数：1名</span>
+          </div>
+          <p class="comment">経年の油汚れをファン・フィルターまで分解洗浄し、次の入居者様が気持ちよく使える状態に。</p>
+        </div>
+      </div>
+
+      <!-- 実績カード 3 -->
+      <div class="case-card">
+        <div class="case-compare">
+          <figure>
+            <figcaption>Before</figcaption>
+            <!-- TODO: images/before3.jpg に差し替え -->
+            <img src="images/before3.jpg" alt="作業前" class="ba-img">
+          </figure>
+          <figure>
+            <figcaption>After</figcaption>
+            <!-- TODO: images/after3.jpg に差し替え -->
+            <img src="images/after3.jpg" alt="作業後" class="ba-img">
+          </figure>
+        </div>
+        <div class="case-body">
+          <h3>浴室・水アカ除去・カビ除去</h3>
+          <div class="case-meta">
+            <span>作業時間目安：約1.5時間</span>
+            <span>作業人数：1名</span>
+          </div>
+          <p class="comment">鏡・蛇口まわりの頑固な水アカに加え、パッキンや目地に発生したカビも専用洗剤で除去し、清潔感のある仕上がりに整えました。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     発注・施工までの流れ
+     ========================================================== -->
+<section class="flow">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">FLOW</span>
+      <h2>お問い合わせから施工完了まで</h2>
+      <p>ご相談から現場確認・お引き渡しまで、4つのステップでシンプルにお手続きいただけます。</p>
+    </div>
+
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="step-num">01</div>
+        <h3>お問い合わせ・案件ご相談</h3>
+        <p>物件詳細やスケジュールをお伺いし、対応可否を迅速にご案内します。</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">02</div>
+        <h3>現地確認・お見積り発行</h3>
+        <p>現場を確認のうえ、作業範囲と費用をまとめたお見積りを発行します。</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">03</div>
+        <h3>施工実施</h3>
+        <p>近隣への配慮と現場でのマナーを徹底したうえで、施工を行います。</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">04</div>
+        <h3>現場確認・お引き渡し</h3>
+        <p>仕上がりをご確認いただき、報告書の提出とあわせて物件をお引き渡しします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     事業概要・対応エリア
+     ========================================================== -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-content">
+      <div class="section-head">
+        <span class="kicker">COMPANY</span>
+        <h2>事業概要</h2>
+      </div>
+
+      <table class="about-table">
+        <tr><th>屋号</th><td>大泉企画</td></tr>
+        <tr><th>代表者</th><td>大泉 峻平</td></tr>
+        <tr><th>事業形態</th><td>個人事業主</td></tr>
+        <tr><th>事業内容</th><td>空室ハウスクリーニング／新築美装／退去後清掃／店舗・施設美装</td></tr>
+        <tr><th>加盟保険</th><td>損害賠償責任保険 加入済み</td></tr>
+      </table>
+    </div>
+
+    <div class="area-content">
+      <div class="section-head">
+        <span class="kicker">SERVICE AREA</span>
+        <h2>対応エリア</h2>
+      </div>
+
+      <div class="area-box">
+        <h3>対応エリア一覧</h3>
+        <div class="area-list">
+          <span class="area-pin">埼玉県</span>
+          <span class="area-pin">東京都</span>
+        </div>
+        <p class="area-note">神奈川県および周辺地域につきましては、案件・時期により対応可能な場合がございます。まずはお気軽にご相談ください。</p>
+      </div>
+
+      <div class="badge-insurance">
+        対物・対人を補償する損害賠償責任保険に加入済みです。安心して施工をお任せいただけます。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     お問い合わせ・見積依頼
+     ========================================================== -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-info">
+      <span class="kicker">CONTACT</span>
+      <h2>お問い合わせ・お見積り依頼</h2>
+      <p>
+        管理会社様・元請業者様からのご相談を随時受け付けております。
+        急ぎの案件についてもまずはお気軽にご連絡ください。
+      </p>
+
+      <div class="contact-urgent">
+        お急ぎの方は、まずはお電話にてご連絡ください。折り返しの手間なくその場でご相談いただけます。
+      </div>
+
+      <!-- TODO: 電話番号を実際の番号に差し替え -->
+      <div class="contact-line">
+        <div class="ico">TEL</div>
+        <div>
+          <strong>お電話でのお問い合わせ（お急ぎの方）</strong>
+          <span>000-0000-0000</span>
+        </div>
+      </div>
+      <!-- TODO: メールアドレスを実際のアドレスに差し替え -->
+      <div class="contact-line">
+        <div class="ico">MAIL</div>
+        <div>
+          <strong>メールでのお問い合わせ</strong>
+          <span>info@oizumi-kikaku.example.com</span>
+        </div>
+      </div>
+    </div>
+
+    <!--
+      フォーム送信処理は未実装です。
+      実際の運用時は action 属性に送信先（フォーム送信サービスやサーバーサイド処理）を指定してください。
+    -->
+    <form class="contact-form" action="#" method="post">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="company">貴社名<span class="req">必須</span></label>
+          <input type="text" id="company" name="company" required placeholder="株式会社〇〇">
+        </div>
+        <div class="form-group">
+          <label for="name">ご担当者名<span class="req">必須</span></label>
+          <input type="text" id="name" name="name" required placeholder="山田 太郎">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="tel">お電話番号<span class="req">必須</span></label>
+          <input type="tel" id="tel" name="tel" required placeholder="000-0000-0000">
+        </div>
+        <div class="form-group">
+          <label for="email">メールアドレス<span class="req">必須</span></label>
+          <input type="email" id="email" name="email" required placeholder="example@company.co.jp">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="property-type">物件種別・施工内容</label>
+          <select id="property-type" name="property-type">
+            <option value="">選択してください</option>
+            <option value="apartment">賃貸・分譲マンション／アパート（退去後）</option>
+            <option value="new-build">新築戸建て・新築マンション（引き渡し前）</option>
+            <option value="house-sale">戸建て売却前・リフォーム後</option>
+            <option value="outsourcing">業務委託・施工協力のご相談</option>
+            <option value="other">その他</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="timing">ご希望時期</label>
+          <input type="text" id="timing" name="timing" placeholder="例：〇月上旬、できるだけ早く 等">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="message">お問い合わせ内容<span class="req">必須</span></label>
+        <textarea id="message" name="message" required placeholder="物件所在地、作業範囲、ご要望などをご記入ください"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">この内容で送信する</button>
+    </form>
+  </div>
+</section>
+
+<!-- ==========================================================
+     フッター
+     ========================================================== -->
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="f-logo">大泉企画</div>
+      <div class="f-addr">
+        代表：大泉 峻平<br>
+        対応エリア：埼玉県・東京都（神奈川県は案件・時期により要相談）<br>
+        <!-- TODO: 電話・メールを実際の情報に差し替え -->
+        TEL：000-0000-0000 ／ MAIL：info@oizumi-kikaku.example.com
+      </div>
+    </div>
+    <nav aria-label="フッターナビゲーション">
+      <a href="#services">事業内容</a>
+      <a href="#portfolio">施工実績</a>
+      <a href="#strength">選ばれる理由</a>
+      <a href="#about">概要・エリア</a>
+      <a href="#contact">お問い合わせ</a>
+    </nav>
+  </div>
+  <p class="copyright">&copy; 2026 大泉企画. All Rights Reserved.</p>
+</footer>
+
+<script>
+  // ハンバーガーメニュー（簡易トグル：モバイル時にナビをドロップダウン表示）
+  document.addEventListener('DOMContentLoaded', function () {
+    var toggle = document.querySelector('.nav-toggle');
+    var nav = document.querySelector('.main-nav');
+    if (!toggle || !nav) return;
+
+    toggle.addEventListener('click', function () {
+      var isOpen = nav.classList.toggle('is-open');
+      if (isOpen) {
+        nav.style.cssText = 'display:flex; flex-direction:column; position:absolute; top:100%; left:0; right:0; background:#fff; padding:16px 24px; border-bottom:1px solid #e1e6ec; gap:16px;';
+      } else {
+        nav.style.cssText = '';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
