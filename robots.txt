@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /thanks.html
+Disallow: /blog/posts.json
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /thanks.html
+Disallow: /blog/posts.json
+
+Sitemap: https://oizumikikaku.pages.dev/sitemap.xml

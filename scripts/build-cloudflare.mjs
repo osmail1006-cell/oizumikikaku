@@ -1,3 +1,4 @@
+import './build-blog.mjs';
 import { cpSync, copyFileSync, existsSync, mkdirSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -12,3 +13,6 @@ mkdirSync(output, { recursive: true });
 for (const file of files) copyFileSync(resolve(root, file), resolve(output, file));
 cpSync(resolve(root, 'assets'), resolve(output, 'assets'), { recursive: true });
 console.log('Cloudflare Pages files are ready in public/');
+
+for(const file of ['robots.txt','sitemap.xml','feed.xml'])copyFileSync(resolve(root,file),resolve(output,file));
+cpSync(resolve(root,'blog'),resolve(output,'blog'),{recursive:true});
