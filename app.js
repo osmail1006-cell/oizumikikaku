@@ -14,3 +14,23 @@ if (CONTACT.email) document.querySelectorAll('[data-email-display]').forEach(ele
 if (CONTACT.mobile) document.querySelectorAll('[data-phone-display]').forEach(element => { element.textContent = CONTACT.mobile; });
 document.querySelector('#year').textContent = new Date().getFullYear();
 
+
+
+// Resolve the form return URL on the current host (GitHub Pages or Cloudflare Pages).
+const hostedInquiryForm = document.querySelector('#inquiry-form');
+if (hostedInquiryForm) {
+  const hostedBase = new URL('./', window.location.href);
+  for (const [fieldName, fieldValue] of [
+    ['_next', new URL('thanks.html', hostedBase).href],
+    ['_url', new URL('#inquiry', hostedBase).href]
+  ]) {
+    let field = hostedInquiryForm.querySelector('input[name="' + fieldName + '"]');
+    if (!field) {
+      field = document.createElement('input');
+      field.type = 'hidden';
+      field.name = fieldName;
+      hostedInquiryForm.appendChild(field);
+    }
+    field.value = fieldValue;
+  }
+}

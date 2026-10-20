@@ -27,3 +27,7 @@ GitHub Pagesは main ブランチのルートを配信します。index.html、s
 
 送信仕様の参考：https://formsubmit.co/documentation
 初回認証の参考：https://formsubmit.co/help
+
+## Cloudflare Pages移行の準備
+
+移行設定は CLOUDFLARE_PAGES.md を参照してください。ビルドコマンドは `node scripts/build-cloudflare.mjs`、公開ディレクトリは `public` です。送信完了ページへの戻り先は公開中のホストから自動設定します。Cloudflare側の接続・デプロイは未実施です。
