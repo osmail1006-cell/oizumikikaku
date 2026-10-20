@@ -21,3 +21,9 @@
 .comparison-bath .before{background-position:left bottom}.comparison-bath .after{background-position:right bottom}
 
 .comparison{aspect-ratio:1.5}
+
+/* Each comparison panel is a separate image, preventing adjacent rows from bleeding. */
+.comparison .comparison-image{background-size:cover;background-position:center;background-repeat:no-repeat}
+.comparison .before{background-image:url('assets/kitchen-before-v4.png')}.comparison .after{background-image:url('assets/kitchen-after-v4.png')}
+.comparison-room .before{background-image:url('assets/room-before-v4.png')}.comparison-room .after{background-image:url('assets/room-after-v4.png')}
+.comparison-bath .before{background-image:url('assets/bath-before-v4.png')}.comparison-bath .after{background-image:url('assets/bath-after-v4.png')}
