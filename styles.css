@@ -19,3 +19,5 @@
 .comparison .before{background-position:left top}.comparison .after{background-position:right top}
 .comparison-room .before{background-position:left center}.comparison-room .after{background-position:right center}
 .comparison-bath .before{background-position:left bottom}.comparison-bath .after{background-position:right bottom}
+
+.comparison{aspect-ratio:1.5}
