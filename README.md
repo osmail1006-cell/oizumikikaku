@@ -2,18 +2,28 @@
 
 空室清掃・原状回復。埼玉県・東京都、その他関東圏は要相談。
 
-公開サイト: https://osmail1006-cell.github.io/oizumikikaku/
+公開：https://osmail1006-cell.github.io/oizumikikaku/
+フォーム：https://osmail1006-cell.github.io/oizumikikaku/#inquiry
 
 ## お問い合わせ
 
-- メール: oizumi.kikaku@gmail.com
-- 電話: 090-5765-1797
-- Googleフォーム: https://forms.gle/NuiNAG29KdVWrDLi7
+メール：oizumi.kikaku@gmail.com
+電話：090-5765-1797
 
-Googleフォームは接続済みですが、確認時は初期状態のため入力項目の設定が必要です。
+## フォームの送信と初回設定
 
-## サイト更新
+HP内にHTMLフォームを設置し、FormSubmit経由で上記メールアドレスへ送信します。初回送信後に届く認証メールを所有者が確認する必要があります。認証・メール受信は未確認で、エージェントによるテスト送信は行っていません。
 
-GitHub Pagesで main ブランチのルートを配信します。HTMLは index.html、デザインは styles.css、操作は app.js、画像は assets/ にあります。元から存在する images/ の写真は保存しています。
+必須：お名前、メールアドレス、相談内容の区分、物件エリア、相談内容、個人情報の取り扱いへの同意。
+任意：会社名、電話番号、物件所在地・物件名、間取り・広さ、希望作業日。
 
-掲載画像は説明用の生成イメージ図であり、実際の施工事例や仕上がりを示すものではありません。実際の施工写真が準備できたら、画像と説明を更新してください。
+送信完了ページは thanks.html。入力内容はGitHubリポジトリや公開ページに書き込みません。FormSubmitの既定reCAPTCHAを維持し、ハニーポットも設置しています。プライバシー表示に外部サービス経由の送信を明記しています。
+
+## 更新
+
+GitHub Pagesは main ブランチのルートを配信します。index.html、styles.css、app.js、thanks.html、assets/ を更新してください。元から存在する images/ は保存しています。
+
+掲載画像は説明用の生成イメージ図であり、実際の施工記録や仕上がりの保証ではありません。
+
+送信仕様の参考：https://formsubmit.co/documentation
+初回認証の参考：https://formsubmit.co/help
