@@ -1,42 +1,33 @@
-# Cloudflare Pagesへの移行
+# Cloudflare Pagesの公開設定
 
-## 準備済み
+更新日：2026-11-05。
+本番は https://oizumikikaku.pages.dev/ で公開済みです。未公開の準備段階ではありません。
 
-- コード：osmail1006-cell/oizumikikaku の main ブランチ。
-- ビルド：scripts/build-cloudflare.mjs が公開用ファイルだけを public/ に用意します。
-- 対象：index.html、styles.css、app.js、thanks.html、assets/。
-- フォーム送信先：oizumi.kikaku@gmail.com（FormSubmit経由）。
-- 送信後の戻り先：閲覧中の公開URLから自動設定するため、Cloudflareでも thanks.html に戻れます。
-- GitHub Pages固定のcanonical指定は解除済み。Cloudflareの正式URLが確定したらcanonicalを設定してください。
-
-## Cloudflareで必要な操作
-
-1. https://dash.cloudflare.com/ にログインします。
-2. Workers & Pages → Create application → Pages → Import an existing Git repository を選びます。
-3. GitHubを連携し、対象リポジトリ osmail1006-cell/oizumikikaku を選択します。
-4. 以下の設定でデプロイします。
-
-| 項目 | 値 |
+| 項目 | 設定 |
 |---|---|
-| Framework preset | None |
+| リポジトリ | osmail1006-cell/oizumikikaku |
 | Production branch | main |
-| Root directory | 未指定（リポジトリのルート） |
+| Framework preset | None |
+| Root directory | 未指定・リポジトリ直下 |
 | Build command | node scripts/build-cloudflare.mjs |
 | Build output directory | public |
-| Environment variables | 追加不要 |
+| 追加の環境変数 | 現構成では不要 |
 
-無料のPagesプロジェクトとして作成します。独自ドメインは不要です。
+mainへの変更がCloudflareで自動ビルド・公開されます。
+ビルド時にブログ、一覧、sitemap.xml、feed.xmlを生成し、公開用ファイルをpublic/へコピーします。
+PHP・WordPress・DBは使っていません。Node.jsはビルド用です。public/はコミットしません。
 
 ## デプロイ後の確認
+- 更新したページの本文が本番に現れていること。
+- 画像、主要ナビゲーション、コラム一覧、問い合わせへのリンク。
+- canonicalがCloudflareの正式URLを指すこと。
+- sitemap.xml、robots.txt、必要に応じfeed.xml。
+- thanks.htmlはCloudflareで/thanksへ転送されることがある。
 
-Cloudflareが表示する実際の *.pages.dev URLを開き、トップページ、画像、問い合わせフォーム、thanks.html を確認してください。
-FormSubmitは公開先が変わると再確認が求められる場合があります。必要な認証を所有者が完了し、テスト送信とメール受信を確認してください。
-Cloudflare公開とフォームの確認が済むまでは、既存のGitHub Pagesを停止しないでください。正式URL確定後、canonicalと旧URLからの案内を整えます。
+問い合わせはFormSubmit経由です。app.jsが閲覧中のホストから戻り先を設定します。
+所有者から有効化・送信テスト完了の報告があります。ブログ更新時に実送信テストは行いません。
+旧GitHub Pagesの停止・転送は未確認です。別の運用AIへ移ってもCloudflareの公開先を変える必要はありません。
 
-## 現在の状態
-
-Cloudflareへのログイン・GitHub連携・Pagesプロジェクト作成は未実施です。Cloudflareアカウントの接続および操作できるブラウザがないため、エージェントは公開URLを発行していません。
-
-公式資料：
-- https://developers.cloudflare.com/pages/framework-guides/deploy-anything/
-- https://developers.cloudflare.com/pages/get-started/git-integration/
+## 公式資料
+https://developers.cloudflare.com/pages/framework-guides/deploy-anything/
+https://developers.cloudflare.com/pages/get-started/git-integration/

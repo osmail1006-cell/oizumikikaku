@@ -1,33 +1,41 @@
 # 大泉企画 ホームページ
 
 空室清掃・原状回復。埼玉県・東京都、その他関東圏は要相談。
+屋号：大泉企画。代表者：大泉 峻平。
 
-公開：https://osmail1006-cell.github.io/oizumikikaku/
-フォーム：https://osmail1006-cell.github.io/oizumikikaku/#inquiry
+## 公開先
+- 正式HP：https://oizumikikaku.pages.dev/
+- フォーム：https://oizumikikaku.pages.dev/#inquiry
+- コラム：https://oizumikikaku.pages.dev/blog/
+- メール：oizumi.kikaku@gmail.com
 
-## お問い合わせ
+GitHub mainがソース、Cloudflare Pagesが本番公開先です。独自ドメインは必須ではありません。
+旧GitHub Pagesの停止・転送は未確認です。
 
-メール：oizumi.kikaku@gmail.com
-電話：090-5765-1797
+## Claude Codeで引き継ぐ
+CLAUDE.md、CLAUDE_HANDOFF.md、prompts/claude-setup.mdを読んでください。
+ブログの実行指示はprompts/weekly-blog.md。週次登録はClaudeアカウント側で別途必要です。ファイルを置くだけでは自動実行されません。
 
-## フォームの送信と初回設定
+## ビルド
 
-HP内にHTMLフォームを設置し、FormSubmit経由で上記メールアドレスへ送信します。初回送信後に届く認証メールを所有者が確認する必要があります。認証・メール受信は未確認で、エージェントによるテスト送信は行っていません。
+    node scripts/build-cloudflare.mjs
 
-必須：お名前、メールアドレス、相談内容の区分、物件エリア、相談内容、個人情報の取り扱いへの同意。
-任意：会社名、電話番号、物件所在地・物件名、間取り・広さ、希望作業日。
+追加パッケージは不要。公開ディレクトリはpublic/です。public/はGit管理対象外。
+設定の詳細はCLOUDFLARE_PAGES.md、記事編集はBLOG_WORKFLOW.mdを参照。
 
-送信完了ページは thanks.html。入力内容はGitHubリポジトリや公開ページに書き込みません。FormSubmitの既定reCAPTCHAを維持し、ハニーポットも設置しています。プライバシー表示に外部サービス経由の送信を明記しています。
+## 問い合わせ
+HP内のHTMLフォームからFormSubmit経由で上記メールへ送信します。
+所有者は初回有効化・送信テストの完了を報告済みです。今回新たな送信・受信確認はしていません。
+reCAPTCHA既定動作とハニーポットあり。送信後の戻り先はapp.jsで現在のホストから設定します。
+必須：氏名、メール、相談区分、物件エリア、相談内容、個人情報の取り扱いへの同意。
+任意：会社名、お客様の電話番号、所在地・物件名、間取り・広さ、希望日。
+入力内容を公開GitHubやHPへ保存する仕組みにはしていません。
+事業者の電話相談表示は削除済みです。お客様用の任意電話入力とは区別してください。
 
-## 更新
+## 掲載画像
+掲載画像は説明用のイメージ図です。実際の施工記録として扱わないでください。
+最終適用画像と文章の経緯はCLAUDE_HANDOFF.mdに記載しています。
 
-GitHub Pagesは main ブランチのルートを配信します。index.html、styles.css、app.js、thanks.html、assets/ を更新してください。元から存在する images/ は保存しています。
-
-掲載画像は説明用の生成イメージ図であり、実際の施工記録や仕上がりの保証ではありません。
-
-送信仕様の参考：https://formsubmit.co/documentation
-初回認証の参考：https://formsubmit.co/help
-
-## Cloudflare Pages移行の準備
-
-移行設定は CLOUDFLARE_PAGES.md を参照してください。ビルドコマンドは `node scripts/build-cloudflare.mjs`、公開ディレクトリは `public` です。送信完了ページへの戻り先は公開中のホストから自動設定します。Cloudflare側の接続・デプロイは未実施です。
+## 送信仕様の資料
+https://formsubmit.co/documentation
+https://formsubmit.co/help
