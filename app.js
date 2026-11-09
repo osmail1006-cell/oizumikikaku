@@ -1,6 +1,6 @@
 'use strict';
 // Only publish contact details that the business owner has supplied for this site.
-const CONTACT = { email: 'oizumi.kikaku@gmail.com', mobile: '090-5765-1797' };
+const CONTACT = { email: 'oizumi.kikaku@gmail.com' };
 const menuButton = document.querySelector('.menu-toggle');
 const mobileMenu = document.querySelector('#mobile-menu');
 function closeMenu() { mobileMenu.hidden = true; menuButton.setAttribute('aria-expanded', 'false'); menuButton.setAttribute('aria-label', 'メニューを開く'); }
@@ -11,7 +11,6 @@ document.querySelectorAll('.comparison').forEach(comparison => { const range = c
 document.querySelectorAll('dialog').forEach(dialog => { dialog.querySelectorAll('.dialog-close,.dialog-dismiss').forEach(button => button.addEventListener('click', () => dialog.close())); dialog.addEventListener('click', event => { if (event.target === dialog) { const box = dialog.getBoundingClientRect(); if (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom) dialog.close(); } }); });
 document.querySelector('#privacy-button').addEventListener('click', () => document.querySelector('#privacy-dialog').showModal());
 if (CONTACT.email) document.querySelectorAll('[data-email-display]').forEach(element => { element.textContent = CONTACT.email; });
-if (CONTACT.mobile) document.querySelectorAll('[data-phone-display]').forEach(element => { element.textContent = CONTACT.mobile; });
 document.querySelector('#year').textContent = new Date().getFullYear();
 
 
